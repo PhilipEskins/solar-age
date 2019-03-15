@@ -1,8 +1,8 @@
-export {earthAge};
 
-export class Person {
+class Person {
   constructor(age) {
     this.age = age;
+    this.life = 0;
   }
   mercAge() {
     return Math.floor(this.age / 0.24);
@@ -13,10 +13,17 @@ export class Person {
   marsAge() {
     return Math.floor(this.age / 1.88);
   }
-  jupAge(age) {
+  jupAge() {
     return Math.floor(this.age / 11.86);
   }
+  liveLong() {
+    const lifeExpect = 78;
+    const remain = lifeExpect - this.age;
+    this.life = remain;
+    return this.life;
+  }
 }
+export {earthAge, Person};
 
 function earthAge(dateInput) {
   const current = new Date();
@@ -31,6 +38,7 @@ function earthAge(dateInput) {
   console.log(test.venusAge());
   console.log(test.marsAge());
   console.log(test.jupAge());
+  console.log(test.liveLong(age));
   return age;
 }
 

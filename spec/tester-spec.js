@@ -29,4 +29,9 @@ describe('Solar Age', function(){
     expect(reusablePerson.jupAge(36)).toEqual(3);
   });
 
+  it('should return your life expectancy on Earth', function() {
+    const reusablePerson = new Person(36);
+    expect(reusablePerson.liveLong(36)).toEqual(42);
+  });
+
 });
