@@ -1,26 +1,28 @@
-import { earthAge, mercAge, venusAge, marsAge, jupAge} from './../src/solar-age.js';
-
+import { Person, earthAge } from './../src/solar-age.js';
 
 describe('Solar Age', function(){
+  beforeEach(function() {
+    const reusablePerson = new Person(36);
+  });
 
   it('should return your age on Earth', function() {
   expect(earthAge("10/04/1982")).toEqual(36);
   });
 
   it('should return your age on Mercury', function() {
-  expect(mercAge(36)).toEqual(150);
+  expect(reusablePerson.mercAge()).toEqual(150);
   });
 
   it('should return your age on Venus', function() {
-  expect(venusAge(36)).toEqual(58);
+  expect(reusablePerson.venusAge(36)).toEqual(58);
   });
 
   it('should return your age on Mars', function() {
-  expect(marsAge(36)).toEqual(19);
+  expect(reusablePerson.marsAge(36)).toEqual(19);
   });
 
   it('should return your age on Jupiter', function() {
-  expect(jupAge(36)).toEqual(3);
+  expect(reusablePerson.jupAge(36)).toEqual(3);
   });
 
 });

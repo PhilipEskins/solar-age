@@ -1,4 +1,22 @@
-export {earthAge, mercAge, venusAge, marsAge, jupAge};
+export {earthAge, Person};
+
+class Person {
+  constructor(age) {
+    this.age = age;
+  }
+  mercAge() {
+    return Math.floor(this.age / 0.24);
+  }
+  venusAge() {
+    return Math.floor(this.age / 0.62);
+  }
+  marsAge() {
+    return Math.floor(this.age / 1.88);
+  }
+  jupAge(age) {
+    return Math.floor(this.age / 11.86);
+  }
+}
 
 function earthAge(dateInput) {
   const current = new Date();
@@ -8,31 +26,12 @@ function earthAge(dateInput) {
   if (month < 0 || (month === 0 && current.getDate() < birthday.getDate())) {
     age--;
   }
-  console.log(mercAge(age));
-  console.log(venusAge(age));
-  console.log(marsAge(age));
-  console.log(jupAge(age));
+  const test = new Person(age);
+  console.log(test.mercAge());
+  console.log(test.venusAge());
+  console.log(test.marsAge());
+  console.log(test.jupAge());
   return age;
-}
-
-function mercAge(age) {
-  const mercury = age / 0.24;
-  return Math.floor(mercury);
-}
-
-function venusAge(age) {
-  const venus = age / 0.62;
-  return Math.floor(venus);
-}
-
-function marsAge(age) {
-  const mars = age / 1.88;
-  return Math.floor(mars);
-}
-
-function jupAge(age) {
-  const jupiter = age / 11.86;
-  return Math.floor(jupiter);
 }
 
 console.log(earthAge("10/04/1982"));
