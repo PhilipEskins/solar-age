@@ -6,14 +6,14 @@
 
 ## Description
 
-_This website accepts a number from the user, optional name (default is Dave), and which order they'd like the display sorted in. The background changes at random. This website does contain a small easter egg._
-_Link to viewable webpage https://philipeskins.github.io/beepboop/_
+_This application will calculate a persons age if they lived on a different planet in the solar system._
 
 ## Setup/Installation Requirements
 
-* _Download repository from https://github.com/PhilipEskins/beepboop/_
-* _Open index.html using your browser of choice_
-* _If you'd like to alter or see the code for the project, after downloading open the folder up in your favorite code editor._
+* _Download repository from https://github.com/PhilipEskins/solar-age/_
+* _Type npm install from the command line interface_
+* _Type npm run start from the command line interface_
+* _If you'd like to alter or see the code for the project, after downloading open the project up in your favorite code editor._
 
 ## Known Bugs
 
@@ -30,8 +30,11 @@ _This website uses HTML, CSS, Bootstrap, JavaScript and jQuery_
 ### Specs
 | Spec | Input | Output |
 | :--------------- | :--------------- | :---------------  |
-| **Program Gathers User Input** | User input: "5" & no name | Output: "0", "1 = Beep!", "2 = Boop", "3 = I'm sorry, Dave. I'm afraid I can't do that.", 4, 5 |
-| **Program Gathers User Input** | User input: "5" & "bob" | Output: "0", "1 = Beep!", "2 = Boop", "3 = I'm sorry, Bob. I'm afraid I can't do that.", 4, 5 |
+| **Program Gathers User Input - Earth** | User input: 10/04/192 | Output: 36 Earth years |
+| **Program Gathers User Input - Mercury** | User input: 10/04/192 | Output: 150 Mercurian years |
+| **Program Gathers User Input - Venus** | User input: 10/04/192 | Output: 59 Venusian years |
+| **Program Gathers User Input - Mars** | User input: 10/04/192 | Output: 19 Martian years |
+| **Program Gathers User Input - Jupiter** | User input: 10/04/192 | Output: 3 Jovian years |
 
 ### License
 
