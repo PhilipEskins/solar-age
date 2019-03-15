@@ -16,22 +16,27 @@ describe('Solar Age', function(){
 
   it('should return your age on Venus', function() {
     const reusablePerson = new Person(36);
-    expect(reusablePerson.venusAge(36)).toEqual(58);
+    expect(reusablePerson.venusAge()).toEqual(58);
   });
 
   it('should return your age on Mars', function() {
     const reusablePerson = new Person(36);
-    expect(reusablePerson.marsAge(36)).toEqual(19);
+    expect(reusablePerson.marsAge()).toEqual(19);
   });
 
   it('should return your age on Jupiter', function() {
     const reusablePerson = new Person(36);
-    expect(reusablePerson.jupAge(36)).toEqual(3);
+    expect(reusablePerson.jupAge()).toEqual(3);
   });
 
   it('should return your life expectancy on Earth', function() {
     const reusablePerson = new Person(36);
-    expect(reusablePerson.liveLong(36)).toEqual(42);
+    expect(reusablePerson.liveLong()).toEqual(42);
+  });
+
+  it('should return your life expectancy on Mercury', function() {
+    const reusablePerson = new Person(36);
+    expect(reusablePerson.mercLife()).toEqual(175);
   });
 
 });
