@@ -1,6 +1,6 @@
-export {earthAge, Person};
+export {earthAge};
 
-class Person {
+export class Person {
   constructor(age) {
     this.age = age;
   }
