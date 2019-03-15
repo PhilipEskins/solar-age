@@ -1,6 +1,5 @@
 class Person {
   constructor(age, life) {
-    const self=this;
     this.age = age;
     this.life = life;
   }
@@ -40,16 +39,26 @@ function earthAge(dateInput) {
   }
   const life = liveLong(age);
   const test = new Person(age, life);
-  console.log(test.mercAge());
-  console.log(test.venusAge());
-  console.log(test.marsAge());
-  console.log(test.jupAge());
-  console.log(life);
-  console.log(test.mercLife());
-  console.log(test.venusLife());
-  console.log(test.marsLife());
-  console.log(test.jupLife());
-  return age;
+  $(".results").append("<p>" + age + " Earth years</p>");
+  $(".results").append("<p>" + test.mercAge() + " Mercurian years</p>");
+  $(".results").append("<p>" + test.venusAge() + " Venusian years</p>");
+  $(".results").append("<p>" + test.marsAge() + " Martian years</p>");
+  $(".results").append("<p>" + test.jupAge() + " Jovian years</p>");
+  $(".results").append("<p>" + life + " approximate Earth years left</p>");
+  $(".results").append("<p>" + test.mercLife() + " approximate Mercurian years left</p>");
+  $(".results").append("<p>" + test.venusLife() + " approximate Venusian years left</p>");
+  $(".results").append("<p>" + test.marsLife() + " approximate Martian years left</p>");
+  $(".results").append("<p>" + test.jupLife() + " approximate Jovian years left</p>");
+  // console.log(test.mercAge());
+  // console.log(test.venusAge());
+  // console.log(test.marsAge());
+  // console.log(test.jupAge());
+  // console.log(life);
+  // console.log(test.mercLife());
+  // console.log(test.venusLife());
+  // console.log(test.marsLife());
+  // console.log(test.jupLife());
+  // return age;
 }
 
 function liveLong(age) {
@@ -58,6 +67,6 @@ function liveLong(age) {
   return life;
 }
 
-console.log(earthAge("10/04/1982"));
+// console.log(earthAge("10/04/1982"));
 
 export {earthAge, liveLong, Person};
