@@ -1,4 +1,4 @@
-export {earthAge, mercAge, venusAge};
+export {earthAge, mercAge, venusAge, marsAge, jupAge};
 
 function earthAge(dateInput) {
   const current = new Date();
@@ -10,6 +10,8 @@ function earthAge(dateInput) {
   }
   console.log(mercAge(age));
   console.log(venusAge(age));
+  console.log(marsAge(age));
+  console.log(jupAge(age));
   return age;
 }
 
@@ -21,6 +23,16 @@ function mercAge(age) {
 function venusAge(age) {
   const venus = age / 0.62;
   return Math.floor(venus);
+}
+
+function marsAge(age) {
+  const mars = age / 1.88;
+  return Math.floor(mars);
+}
+
+function jupAge(age) {
+  const jupiter = age / 11.86;
+  return Math.floor(jupiter);
 }
 
 console.log(earthAge("10/04/1982"));
