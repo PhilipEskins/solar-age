@@ -55,23 +55,8 @@ function liveLong(age) {
   return life;
 }
 
-function printResults(dateInput) {
-  const num1 = earthAge(dateInput);
-  const num2 = liveLong(num1);
-  const test = new Person(num1, num2);
-  $(".results").append("<p>" + num1 + " Earth years</p>");
-  $(".results").append("<p>" + test.mercAge() + " Mercurian years</p>");
-  $(".results").append("<p>" + test.venusAge() + " Venusian years</p>");
-  $(".results").append("<p>" + test.marsAge() + " Martian years</p>");
-  $(".results").append("<p>" + test.jupAge() + " Jovian years</p>");
-  $(".results").append("<p>" + num2 + " approximate Earth years left</p>");
-  $(".results").append("<p>" + test.mercLife() + " approximate Mercurian years left</p>");
-  $(".results").append("<p>" + test.venusLife() + " approximate Venusian years left</p>");
-  $(".results").append("<p>" + test.marsLife() + " approximate Martian years left</p>");
-  $(".results").append("<p>" + test.jupLife() + " approximate Jovian years left</p>");
 
-}
 
 // console.log(earthAge("10/04/1982"));
 
-export {earthAge, liveLong, printResults, Person};
+export {earthAge, liveLong, Person};
