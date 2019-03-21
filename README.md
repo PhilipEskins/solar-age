@@ -1,6 +1,6 @@
 # _Solar Age_
 
-#### _Application for Solar Age, Last Updated 03-15-2019_
+#### _Application for Solar Age, Last Updated 03-20-2019_
 
 #### By _**Philip Eskins**_
 
@@ -17,7 +17,7 @@ _This application will calculate a persons age if they lived on a different plan
 
 ## Known Bugs
 
-_Prints out results twice._
+_No known bugs at this time._
 
 ## Support and contact details
 
